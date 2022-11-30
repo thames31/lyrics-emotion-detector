@@ -22,6 +22,7 @@ def recommend(name):
     links = []
     
     inpt_song = name
+    
     dl = distance.sort_values(by=inpt_song)
     
     idx = list(dl.head(5).index)
@@ -30,7 +31,7 @@ def recommend(name):
     ids = list(dl.head(5).id)
     
     for id in ids:
-        link = "https://open.spotify.com/track/" + id
+        link = "https://open.spotify.com/embed/track/" + id
         links.append(link)
     
     return(render_template('recommend.html', input=name,
