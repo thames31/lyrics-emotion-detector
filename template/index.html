@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Song Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
 </head>
 <body>
     <div class="home">
         <h1>Spotify Song Recommender</h1>
-        <h2>Just insert a song name and we'll give you the top 5 songs similar to that song</h2>
+        <h2>Type in a song name and we'll give you the top 5 songs similar to that song</h2>
         
         <form action="http://127.0.0.1:8080/" method="post">
-            <p>Enter Song Name:</p>
+            <p>Enter Song Name :</p>
             <input type="text" name="song_name" placeholder="Song name" required="required">
             <button type="submit" class="btn">Recommend</button>
         </form>
+        
     </div>
     
 </body>
-</html>
+</html> 

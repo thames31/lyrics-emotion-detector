@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+</head>
+<body>
+    <h2>Here are the top 5 similar songs to {{input}} </h2>
+    <ol>
+        <li><a href={{ link1 }} target="_blank">{{ song1 }} by {{ artist1}}</a></li>
+        <li><a href={{ link2 }} target="_blank">{{ song2 }} by {{ artist2}}</a></li>
+        <li><a href={{ link3 }} target="_blank">{{ song3 }} by {{ artist3}}</a></li>
+        <li><a href={{ link4 }} target="_blank">{{ song4 }} by {{ artist4}}</a></li>
+        <li><a href={{ link5 }} target="_blank">{{ song5 }} by {{ artist5}}</a></li>
+    </ol>
+</body>
+</html>

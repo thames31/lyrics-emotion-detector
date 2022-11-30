@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: rgb(23, 26, 25);
+  color:#81b71a
+}
+
+h1 {
+  text-align: center;
+  background-color: black;
+  padding: 1em;
+}
+
+h2 {
+  padding: 1em;
+}
+
+form {
+  padding: 1em;
+}
+
+input {
+  background-color: #e2eee2; /* Green */
+  border: none;
+  padding: 15px 32px;
+  font-size: 16px;
+}
+
+a {
+  color:#81b71a;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#233306;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+}
