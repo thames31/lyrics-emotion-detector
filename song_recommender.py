@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-import pandas as pd
+from functions import *
 
 app = Flask(__name__, template_folder='template')
 
@@ -19,21 +19,9 @@ def get_input():
 @app.route('/recommend/<name>')
 def recommend(name):
     
-    links = []
-    
-    inpt_song = name
-    
-    dl = distance.sort_values(by=inpt_song)
-    
-    idx = list(dl.head(5).index)
-    song_names = list(en_songs.iloc[idx]['track_name'])
-    song_artists = list(en_songs.iloc[idx]['track_artist'])
-    ids = list(dl.head(5).id)
-    
-    for id in ids:
-        link = "https://open.spotify.com/embed/track/" + id
-        links.append(link)
-    
+    song_id = name 
+    links, song_names, song_artists = recommend(song_id, distance, en_songs)
+
     return(render_template('recommend.html', input=name,
                         link1=links[0], song1=song_names[0], artist1=song_artists[0],
                         link2=links[1], song2=song_names[1], artist2=song_artists[1],
