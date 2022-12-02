@@ -9,18 +9,12 @@ from sklearn.metrics import pairwise_distances
 
 stopwords = nltk.corpus.stopwords.words('english')
 
-
-
 def clean_lyrics(text):
-    # Lowering string
+
     text = text.str.lower()
-
-    # Removing non-alpha chars
     text = text.str.replace('[^a-z]', ' ')
-
-    # Removing stopwords
     text = text.apply(lambda x: ' '.join([word for word in x.split() if word not in (stopwords)]))
-    
+    return text
 
 def plot_elbow(X,start,end):
     
@@ -44,18 +38,15 @@ def reduce_size(matrix):
     rounded_matrix = np.round(matrix,2)
     return rounded_matrix
 
-def recommend(song_id, df1, df2):
-    dl = df1.sort_values(by=song_id)
+def recommend(song_id, df):
+
+    dl = df.sort_values(by=song_id)
     
     ids = list(dl.head(5).id)
     links = []
     
-    idx = list(dl.head(5).index)
-    song_names = list(df2.iloc[idx]['track_name'])
-    song_artists = list(df2.iloc[idx]['track_artist'])
-    
     for id in ids:
-        link = "https://open.spotify.com/track/" + id
+        link = "https://open.spotify.com/embed/track/" + id + "?utm_source=generator"
         links.append(link)
     
-    return links, song_names, song_artists
+    return links
