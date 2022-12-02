@@ -38,9 +38,11 @@ def reduce_size(matrix):
     rounded_matrix = np.round(matrix,2)
     return rounded_matrix
 
-def recommend(song_id, df):
+def recommend_songs(song_name, artist, df):
+    
+    artistnsong = artist + " " + song_name
 
-    dl = df.sort_values(by=song_id)
+    dl = df.sort_values(by=artistnsong)
     
     ids = list(dl.head(5).id)
     links = []
