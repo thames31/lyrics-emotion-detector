@@ -37,14 +37,14 @@ SK-Learn's pairwise distance was used to calculate the euclidean distance betwee
 
 Unfortunately, an important csv file could not be pushed into the repository since it was 1GB. If you wish to see the deployment on your local machine, you need to run these notebooks in the following order to generate the important csv file for the recommendation algorithm. 
 
-** Make sure to open distance.ipynb and check that the last cell is uncommented so the dataframe is converted to a csv file. **
+**Make sure to open distance.ipynb and check that the last cell is uncommented so the dataframe is converted to a csv file.**
 
 1. distance.ipynb (distances.csv file should be generated in the data folder)
 2. deployment.ipynb
 
 After you have ran both of these notebooks, you can now run ``` python song_recommender.py``` in your terminal. 
 
-** Make sure that the terminal is in the same directory as the repository. **
+ **Make sure that the terminal is in the same directory as the repository.**
 
 
 # Contact Me
