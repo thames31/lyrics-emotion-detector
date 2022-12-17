@@ -6,10 +6,7 @@ The dataset that we will be using is available on [Kaggle](https://www.kaggle.co
 
 # Tools used for this project
 
-Python
-Flask
-HTML
-CSS
+Python (Pandas, numpy, matplotlib) Flask, HTML, CSS
 
 # Exploratory Data Analysis
 
