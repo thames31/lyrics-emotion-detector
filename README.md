@@ -42,6 +42,13 @@ Unfortunately, an important csv file could not be pushed into the repository sin
 After you have ran both of these notebooks, you can now run ``` python song_recommender.py``` in your terminal. 
 
  **Make sure that the terminal is in the same directory as the repository.**
+ 
+ # Demo
+
+https://user-images.githubusercontent.com/85949480/209702483-b0ee5ea6-3409-4935-b2ee-7ad4188d4de2.mp4
+
+
+https://user-images.githubusercontent.com/85949480/209702503-aeeaec6e-0ab9-4763-ad50-22a20f57f470.mp4
 
 
 # Contact Me
